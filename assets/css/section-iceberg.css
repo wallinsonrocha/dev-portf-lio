@@ -1,0 +1,36 @@
+/* ====================== Editáveis ====================== */
+#iceberg{
+    /* Cor de fundo */
+    background-color: var(--primaria);
+}
+
+#iceberg h1 {
+    /* Tipo de fonte */
+    font-family: var(--font);
+    /* Tamanho da fonte */
+    font-size: var(--h1-tam);
+    /* Cor do texto */
+    color: var(--cor-branco);
+}
+
+#iceberg p {
+    /* Tamanho da fonte */
+    font-size: var(--p-tam);
+    /* Tipo de fonte */
+    font-family: var(--font);
+    /* Peso da fonte */
+    font-weight: var(--regular);
+    /* Cor do texto */
+    color: var(--cor-branco);
+}
+
+/* ====================== CSS ====================== */
+#iceberg{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+#iceberg img{
+    width: 100%;
+}

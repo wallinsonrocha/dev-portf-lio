@@ -1,0 +1,161 @@
+/* ====================== Editáveis ====================== */
+#inicio h1 {
+    /* Tipo de fonte */
+    font-family: var(--font);
+    /* Tamanho da fonte */
+    font-size: var(--h1-tam);
+    /* Cor do texto */
+    color: var(--cor-branco);
+}
+
+#inicio span {
+    /* Cor do texto */
+    color: var(--cor-detalhe-titulo-1);
+}
+
+#inicio p {
+    /* Tamanho da fonte */
+    font-size: var(--p-tam);
+    /* Tipo de fonte */
+    font-family: var(--font);
+    /* Peso da fonte */
+    font-weight: var(--bold);
+    /* Cor do texto */
+    color: var(--cor-branco);
+}
+
+#inicio .inicio__carousel {
+    /* Cor do texto */
+    color: var(--cor-preto);
+    /* Tamanho da fonte */
+    font-size: var(--h3-tam);
+    /* Peso da fonte */
+    font-weight: var(--bold);
+    /* Tipo de fonte */
+    font-family: var(--font);
+}
+
+/* ====================== CSS ====================== */
+#inicio {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* background: rgb(253, 151, 81);
+    background: linear-gradient(90deg, rgb(20, 5, 75) 0%, rgb(54, 2, 31) 100%); */
+    gap: 60px;
+}
+
+#inicio .inicio__content h1 {
+    font-size: 60px;
+}
+
+.inicio__content {
+    gap: 32px;
+    height: 80vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.inicio__carousel {
+    position: relative;
+    display: grid;
+    left: -8%;
+    width: 105vw;
+    align-items: center;
+    overflow-x: hidden;    
+    background-color: #fff;
+}
+
+.inicio__carousel::before,
+.inicio__carousel::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 62px;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+}
+
+.inicio__carousel::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+#inicio ul {
+    position: relative;
+    left: -12%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 42px;
+    overflow:hidden;
+}
+
+#inicio ul li {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#inicio ul li::before {
+    content: "";
+    display: flex;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: #000;
+    margin-right: 42px;
+}
+
+.inicio__carousel-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+/* ====================== TABLETS ====================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #inicio .inicio__content h1 {
+        font-size: 80px;
+    }
+
+    .inicio__carousel {
+        left: -16%;
+    }
+}
+
+/* ====================== DESKTOP ====================== */
+@media (min-width: 1024px) {
+    #inicio {        
+        justify-content: space-between;
+    }
+
+    #inicio h1{
+        max-width: 635px;
+    }
+
+    #inicio .inicio__content h1 {
+        font-size: 80px;        
+    }
+
+    .inicio__carousel {
+        left: -15%;
+    }
+
+    .inicio__content p {
+        max-width: 350px;
+    }
+
+    .inicio__content {
+        text-align: start;
+    }
+}
+
+/* ====================== ANIMATION ====================== */
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-220px * 5))}
+}

@@ -1,0 +1,109 @@
+
+/* ====================== EDITÁVEIS ====================== */
+#proposta{
+    /* Cor de fundo */
+    background-color: var(--primaria);
+}
+
+#proposta h1{
+      /* Tamanho */
+      font-size: var(--h1-tam);
+      /* Cor */
+      color: var(--cor-branco);
+      /* Fonte */
+      font-family: var(--font);
+      /* Peso da fonte */
+      font-weight: var(--bold);
+}
+
+#proposta p{
+    /* Tamanho */
+    font-size: var(--p-tam);
+    /* Cor */
+    color: var(--cor-preto);
+    /* Fonte */
+    font-family: var(--font);
+    /* Peso da fonte */
+    font-weight: var(--regular);
+}
+
+#proposta li{
+    /* Tamanho */
+    font-size: var(--p2-tam);
+    /* Cor */
+    color: var(--cor-preto);
+    /* Fonte */
+    font-family: var(--font);
+    /* Peso da fonte */
+    font-weight: var(--regular);
+}
+
+#proposta .proposta__valor p{
+    /* Peso da fonte */
+    font-weight: var(--bold) !important;
+}
+
+#proposta .proposta__card h1{
+    /* Cor */
+    color: var(--cor-preto) !important;
+}
+
+/* ====================== CSS ====================== */
+
+#proposta .proposta__cards{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 80px;
+}
+
+#proposta .proposta__cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+#proposta .proposta__card{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 1rem;
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+    width: 360px;
+}
+
+#proposta .proposta__valor{
+    margin: 0 auto;
+}
+
+#proposta .proposta__valor p{
+    position: relative;
+    right: 1rem;
+}
+
+#proposta ul{
+    display: grid;
+    gap: 1rem;    
+}
+
+#proposta li{
+    display: flex;
+    align-items: center;    
+}
+
+#proposta li::before{
+    margin-right: 1rem;
+    content: url(../images/proposta/Check.svg);
+}
+
+/* ====================== TABLETS ====================== */
+
+/* ====================== DESKTOP ====================== */
+@media (min-width: 1024px) {
+    #proposta .proposta__cards{
+        flex-direction: row;
+    }
+}

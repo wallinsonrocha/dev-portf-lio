@@ -1,0 +1,31 @@
+/* ====================== EDITÁVEIS ====================== */
+#frase{
+    /* Cor de fundo */
+    background-color: var(--secundaria);
+}
+
+#frase h1{
+      /* Tamanho */
+      font-size: var(--h1-tam);
+      /* Cor */
+      color: var(--cor-preto);
+      /* Fonte */
+      font-family: var(--font);
+      /* Peso da fonte */
+      font-weight: var(--bold);
+}
+
+/* ====================== CSS ====================== */
+#frase{    
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+
+#frase h1{
+    max-width: 570px;
+}
+
+/* ====================== TABLETS ====================== */
+
+/* ====================== DESKTOP ====================== */

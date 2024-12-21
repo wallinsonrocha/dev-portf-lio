@@ -1,0 +1,144 @@
+/* ====================== Editáveis ====================== */
+#equipe{
+    /* Cor de fundo */
+    background-color: var(--primaria);
+}
+
+#equipe h1 {
+    /* Tipo de fonte */
+    font-family: var(--font);
+    /* Tamanho da fonte */
+    font-size: var(--h1-tam);
+    /* Cor do texto */
+    color: var(--cor-branco);
+}
+
+#equipe p {
+    /* Tamanho da fonte */
+    font-size: var(--p-tam);
+    /* Tipo de fonte */
+    font-family: var(--font);
+    /* Peso da fonte */
+    font-weight: var(--regular);
+    /* Cor do texto */
+    color: var(--cor-branco);
+}
+
+#equipe a{
+    /* Tamanho da fonte */
+    font-size: var(--p-tam);
+    /* Tipo de fonte */
+    font-family: var(--font);
+    /* Peso da fonte */
+    font-weight: var(--regular);
+    /* Cor do texto */
+    color: var(--cor-branco);
+}
+
+/* ====================== CSS ====================== */
+#equipe {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;    
+    gap: 60px;
+}
+
+#equipe img{
+    width: 100%;
+}
+
+.equipe__cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.equipe__descricao{
+    display: grid;
+    gap: 1rem;
+}
+
+.equipe__descricao a{
+    padding: 1rem 1.6rem;
+    text-align: center !important;
+    background-color: rgb(26, 172, 50);
+    border-radius: 8px;
+}
+
+.equipe__content {
+    gap: 32px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.equipe__card {
+    display: flex;
+    flex-direction: column;    
+    gap: 32px;
+    margin: 2rem 0;
+}
+
+.equipe__card:nth-child(odd)  img{
+    border-radius: 100px 50px 250px 0px;
+}
+
+.equipe__card:nth-child(even)  img{
+    border-radius: 50px 100px 0px 250px;
+}
+
+/* ====================== TABLETS ====================== */
+@media (min-width: 768px) and (max-width: 1024px) {        
+    .equipe__card{
+        max-width: 490px;
+    }
+}
+
+/* ====================== DESKTOP ====================== */
+@media (min-width: 1024px) {    
+    .equipe__cards{
+        align-items: start;                
+    }
+
+    #equipe img{
+        object-fit: cover;
+        width: 35%;        
+    }
+
+    .equipe__card{
+        gap: 40px;
+    }
+
+    .equipe__card:nth-child(even){
+        flex-direction: row-reverse;                  
+        align-self: self-end;
+    }
+
+    .equipe__card:nth-child(even) .equipe__content{
+        align-items: end;
+    }
+
+    .equipe__card:nth-child(even) *{
+        text-align: right;
+    }
+
+    .equipe__card{
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .equipe__content p {
+        max-width: 480px;
+    }
+
+    .equipe__content {
+        text-align: start;
+    }
+}
+
+/* ====================== ANIMATION ====================== */
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-220px * 5))}
+}

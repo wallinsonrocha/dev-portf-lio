@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Sora';
+    src: url('../fonts/sora/Sora-ExtraBold.woff');
+    src: url('../fonts/sora/Sora-Regular.woff');
+}
+
+/* ====================== Variáveis globais ====================== */
+:root {
+    /* Textos - Tamanho */
+    --h1-tam: 36px;
+    --h2-tam: 28px;
+    --h3-tam: 20px;
+    --p-tam: 16px;
+    --p2-tam: 14px;
+
+    /* Texto - Fontes */
+    --font: 'Sora';
+
+    /* Textos - Peso */
+    --bold: bolder;
+    --regular: 400;
+
+    /* Cores */
+    --primaria: #1D1A39;
+    --secundaria: #F5F5F5;
+
+    --cor-branco: #fff;
+    --cor-preto: #000;
+}
+
+/* ====================== CSS ====================== */
+
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+h1 {
+    font-weight: var(--bold);
+}
+
+p {
+    line-height: 1.6rem;
+}
+
+section {
+    padding: 5rem 1rem;
+}
+
+main {
+    background: rgb(253, 151, 81);
+    background: linear-gradient(90deg, rgb(20, 5, 75) 0%, rgb(54, 2, 31) 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.top-obj {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 8px 32px;
+    gap: 16px;
+    border-radius: 40px;
+    background-color: #3D3D3D;
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0, 0.5));
+    color: #fff !important;
+    font-weight: var(--bold) !important;
+}
+
+.point {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #27D00B;
+    animation: pulse-animation 1s infinite;
+}
+
+.point2::before {
+    content: "";
+    margin-right: 1rem;
+    display: inline-block;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    background-color: #3A08C9;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ====================== TABLETS ====================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    section {
+        padding: 4rem 5rem;
+    }
+}
+
+/* ====================== DESKTOP ====================== */
+
+@media (min-width: 1024px) {
+    section {
+        padding: 4rem 8%;
+    }
+}
+
+/* ====================== ANIMATION ====================== */
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgb(39, 208, 11, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}

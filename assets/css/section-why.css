@@ -1,0 +1,132 @@
+/* Adaptação de modelo antigo */
+
+#why {
+  /* background-color: rgb(20, 5, 75); */
+  overflow: hidden;
+  padding: 0;
+  font-family: var(--font);
+
+  h1 {
+    font-size: var(--h1-tam);
+    color: #fff;
+    text-align: left;
+  }
+}
+
+#why #why__blurbg {
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+#why #why__blurbg h1 {
+  margin-bottom: 2rem;
+}
+
+#why .why__content {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  max-width: 90vw;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+#why .why__content .why-text {
+  display: grid;
+  gap: 1rem;
+  overflow: hidden;
+  max-width: 410px;
+  grid-template-rows: 0fr;
+  transition: all 0.3s linear;
+}
+
+#why .why__content .why-text span {
+  color: #580a63;
+  font-weight: bolder;
+}
+
+#why .why__content .why-text-reveal {
+  grid-template-rows: 1fr;
+}
+
+#why .why__content h2 {
+  font-weight: bold;
+}
+
+#why img {
+  position: relative;
+  object-fit: cover;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .why__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+  }
+
+  .why__content img {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #why {
+    display: flex;
+    justify-content: center;
+    height: 1550px;
+  }
+
+  #why #why__blurbg {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 1100px;
+  }
+
+  #why #why__blurbg .why__content {
+    width: 200px;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s all linear;
+  }
+
+  #why #why__blurbg .why__content .why-text {
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+    gap: 0.5rem;
+    transition-delay: 0.3s;
+  }
+
+  #why #why__blurbg .why__content img {
+    transform: scale(2.5);
+    width: 200px;
+  }
+
+  #why #why__blurbg .why-text-reveal-desk {
+    width: 1060px !important;
+  }
+
+  #why #why__blurbg .why-text-reveal-desk .why-text {
+    height: 250px;
+  }
+
+  #why #why__blurbg .why__content:nth-child(3) {
+    align-self: self-end;
+  }
+
+  #why #why__blurbg .why__content:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+}
