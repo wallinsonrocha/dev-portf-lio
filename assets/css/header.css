@@ -1,0 +1,11 @@
+header{
+    font-family: var(--font);
+    display: flex;
+    gap: 2rem;
+    justify-items: end;
+    justify-content: end;
+
+    a {
+        color: white;
+    }
+}
